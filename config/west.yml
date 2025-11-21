@@ -1,0 +1,11 @@
+manifest:
+  remotes:
+    - name: nazuna293
+      url-base: https://github.com/nazuna293
+  projects:
+    - name: zmk-keyboard-Enigma_01
+      remote: nazuna293
+      revision: v1.0
+      import: config/west.yml
+  self:
+    path: config
