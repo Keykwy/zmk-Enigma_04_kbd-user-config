@@ -3,9 +3,9 @@ manifest:
     - name: nazuna293
       url-base: https://github.com/nazuna293
   projects:
-    - name: zmk-keyboard-Enigma_01
+    - name: zmk-keyboard-Enigma_04
       remote: nazuna293
-      revision: v1.0
+      revision: v1.1
       import: config/west.yml
   self:
     path: config
