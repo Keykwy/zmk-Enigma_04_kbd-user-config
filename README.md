@@ -25,6 +25,6 @@
 |tp3|space|layer |B||
 |tp4|:||;||
 
-※レイヤー4に推移している間はALTキーが押されている状態になっています。
+※レイヤー to_○○に推移している間は○○キーが押されている状態になっています。
 
 ![](https://raw.githubusercontent.com/nazuna293/zmk-keyboard-Enigma_04_kbd/main/keymap-drawer/Enigma_04_QWERTY.svg)
