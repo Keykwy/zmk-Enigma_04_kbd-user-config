@@ -1,27 +1,27 @@
 include:
   - board: seeeduino_xiao_ble
-    shield: Enigma_04_kbd_L Enigma_04_kbd_L_ENC rgbled_adapter
-    snippet: studio-rpc-usb-uart
+    shield: Enigma_04_kbd_L Enigma_04_kbd_L_O rgbled_adapter
+    snippet: zmk-usb-logging studio-rpc-usb-uart
     cmake-args: -DKEYMAP_FILE=../../config/Enigma_04_OONISHI.keymap
-    artifact-name: Enigma_04_OONISHI_L
+    artifact-name: Enigma_04_kbd_OONISHI_L
     
   - board: seeeduino_xiao_ble
-    shield: Enigma_04_kbd_R rgbled_adapter
-    snippet: studio-rpc-usb-uart
+    shield: Enigma_04_kbd_R Enigma_04_kbd_R_O rgbled_adapter
+    snippet: zmk-usb-logging studio-rpc-usb-uart
     cmake-args: -DKEYMAP_FILE=../../config/Enigma_04_OONISHI.keymap
-    artifact-name: Enigma_04_OONISHI_R
+    artifact-name: Enigma_04_kbd_OONISHI_R
 
   - board: seeeduino_xiao_ble
-    shield: Enigma_04_kbd_L rgbled_adapter
-    snippet: studio-rpc-usb-uart
+    shield: Enigma_04_kbd_L Enigma_04_kbd_L_Q rgbled_adapter
+    snippet: zmk-usb-logging studio-rpc-usb-uart
     cmake-args: -DKEYMAP_FILE=../../config/Enigma_04_QWERTY.keymap
-    artifact-name: Enigma_04_QWERTY_L
+    artifact-name: Enigma_04_kbd_QWERTY_L
     
   - board: seeeduino_xiao_ble
-    shield: Enigma_04_kbd_R Enigma_04_kbd_R_ENC rgbled_adapter
-    snippet: studio-rpc-usb-uart
+    shield: Enigma_04_kbd_R Enigma_04_kbd_R_Q rgbled_adapter
+    snippet: zmk-usb-logging studio-rpc-usb-uart
     cmake-args: -DKEYMAP_FILE=../../config/Enigma_04_QWERTY.keymap
-    artifact-name: Enigma_04_QWERTY_R
+    artifact-name: Enigma_04_kbd_QWERTY_R
     
   - board: seeeduino_xiao_ble
     shield: settings_reset
