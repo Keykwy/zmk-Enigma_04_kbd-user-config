@@ -1,7 +1,7 @@
 # キーマップ編集ガイド  
 
 ここではキーマップ編集の手順を説明します。  
-総合案内は[こちら](https://github.com/nazuna293/Enigma_01)です。
+総合案内は[こちら](https://github.com/nazuna293/Enigma_04)です。
 
 ## キーマップ編集  
 
@@ -27,4 +27,4 @@
 
 ※レイヤー4に推移している間はALTキーが押されている状態になっています。
 
-![](https://raw.githubusercontent.com/nazuna293/zmk-keyboard-Enigma_01/main/keymap-drawer/Enigma_01_a.svg)
+![](https://raw.githubusercontent.com/nazuna293/zmk-keyboard-Enigma_04_kbd/main/keymap-drawer/Enigma_04_QWERTY.svg)
