@@ -20,10 +20,10 @@
 ### Tap Dance
 |name|tap|hold|2tap|tap hold|
 |:-:|:-:|:-:|:-:|:-:|
-|tp1|Tab|Ctrl|Q||
-|tp2||Shift||Ctrl|
-|tp3|半／全|layer to_ALT|||
-|tp4|F7|layer to_ALT|F8||
+|tp1|半／全|layer to_ALT|||
+|tp2|F7|layer to_ALT|F8||
+|tp3|space|layer |B||
+|tp4|:||;||
 
 ※レイヤー4に推移している間はALTキーが押されている状態になっています。
 
