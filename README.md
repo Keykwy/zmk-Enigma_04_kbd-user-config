@@ -24,6 +24,10 @@
 |tp2|F7|layer to_ALT|F8||
 |tp3|space|layer |B||
 |tp4|:||;||
+|Sft||Sft||layer to_Shift|
+|Ctl||Ctl||layer to_Ctrl|
+|Win||Win||layer to_Win|
+|Alt||Alt||layer to_Alt|
 
 ※レイヤー to_○○に推移している間は○○キーが押されている状態になっています。
 
