@@ -24,8 +24,8 @@
 |tp2|F7|layer to_ALT|F8||
 |tp3|space|layer |B||
 |tp4|:||;||
-|Sft||Sft||layer to_Shift|
-|Ctl||Ctl||layer to_Ctrl|
+|Sft||Shift||layer to_Shift|
+|Ctl||Ctrl||layer to_Ctrl|
 |Win||Win||layer to_Win|
 |Alt||Alt||layer to_Alt|
 
