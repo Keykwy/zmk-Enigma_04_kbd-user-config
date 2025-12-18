@@ -1,6 +1,6 @@
 # ZMK Studio
 ## ブラウザ上で接続
-1. Enigma_01とパソコンをUSB-Cケーブルで接続します。
+1. Enigma_04とパソコンをUSB-Cケーブルで接続します。
 2. ブラウザ上で[ZMK Studio](https://zmk.studio)を開きます。
 <img src="img/ZS_01.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 3. Enigma_01を選択して接続します。
@@ -16,5 +16,5 @@
 <img src="img/ZS_06.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 
 ## 接続解除  
-1. Enigma_01の接続を解除してwebページを閉じます。
+1. Enigma_04の接続を解除してwebページを閉じます。
 <img src="img/ZS_07.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
