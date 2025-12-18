@@ -3,8 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// #include <layout_shift_kp_override.dtsi>
-
+#undef ZMK_POINTING_DEFAULT_SCRL_VAL
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 / {
@@ -115,52 +114,52 @@
 
         // rotary encoder
 
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        scroll_up_down: mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <20>;
+            tap-ms = <50>;
         };
 
         // rotary encoder
 
-        scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
+        scroll_left_right: mouse_wheel_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
-            tap-ms = <20>;
+            tap-ms = <50>;
         };
 
         // rotary encoder
 
-        arrow_left_right: behavior_sensor_rotate_arrow_le {
+        arrow_left_right: arrow_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp RIGHT>;
 
-            tap-ms = <20>;
+            tap-ms = <50>;
         };
 
         // rotary encoder
 
-        arrow_up_down: behavior_sensor_rotate_arrow_up {
+        arrow_up_down: arrow_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&kp UP>, <&kp DOWN>;
 
-            tap-ms = <20>;
+            tap-ms = <50>;
         };
 
         // rotary encoder
 
-        page_up_down: behavior_sensor_rotate_page_up_ {
+        page_up_down: page_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
 
-            tap-ms = <20>;
+            tap-ms = <50>;
         };
 
         td1: td_hz_mo_kn {
@@ -177,18 +176,18 @@
             bindings = <&lt 9 F7>, <&kp F8>;
         };
 
-        td3: td_space_mo_slash_mo {
+        td3: td_space_mo_slash {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SPACE_MO_SLASH_MO";
+            label = "TD_SPACE_MO_SLASH";
             #binding-cells = <0>;
-            bindings = <&lt 2 SPACE>, <&lt 3 SLASH>;
+            bindings = <&lt 1 SPACE>, <&kp SLASH>;
         };
 
-        td4: td_g_mo_mo {
+        td4: coron_semicoron {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_G_MO_MO";
+            label = "TD_COLON_SEMICOLON";
             #binding-cells = <0>;
-            bindings = <&lt 1 G>, <&mo 3>;
+            bindings = <&kp COLON>, <&kp SEMICOLON>;
         };
 
         Ctl: td_ctrl_toctrl {
@@ -223,8 +222,8 @@
     combos {
         compatible = "zmk,combos";
 
-        lt_enter {
-            bindings = <&lt 3 ENTER>;
+        enter {
+            bindings = <&kp ENTER>;
             key-positions = <15 16>;
             layers = <0 1 2 3 6 7 8 9>;
         };
@@ -236,13 +235,13 @@
         };
 
         lt_delete {
-            bindings = <&lt 9 DELETE>;
+            bindings = <&lt 3 DELETE>;
             key-positions = <5 7>;
             layers = <0 1 2 3>;
         };
 
         lt_f2 {
-            bindings = <&lt 1 F2>;
+            bindings = <&lt 3 F2>;
             key-positions = <0 2>;
             layers = <0 1 2 3>;
         };
@@ -257,6 +256,12 @@
             bindings = <&td2>;
             key-positions = <1 2>;
             layers = <0 1 2 3>;
+        };
+
+        td4 {
+            bindings = <&td4>;
+            key-positions = <21 22>;
+            layers = <0>;
         };
 
         copy {
@@ -282,7 +287,7 @@
             key-positions = <8 9>;
             layers = <0 1 2 3>;
         };
-        
+
         p {
             bindings = <&kp P>;
             key-positions = <7 17>;
@@ -292,6 +297,24 @@
         q {
             bindings = <&kp Q>;
             key-positions = <0 8>;
+            layers = <0>;
+        };
+
+        hyphen {
+            bindings = <&kp MINUS>;
+            key-positions = <4 5>;
+            layers = <0>;
+        };
+
+        atsign {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <13 14>;
+            layers = <0>;
+        };
+
+        ro {
+            bindings = <&kp INTERNATIONAL_1>;
+            key-positions = <23 24>;
             layers = <0>;
         };
 
@@ -360,16 +383,26 @@
             key-positions = <25 27>;
             layers = <0 1 2 3>;
         };
+
+        lsetting {
+            bindings = <&mo 5>;
+            key-positions = <20 21 22>;
+        };
+
+        rsetting {
+            bindings = <&mo 5>;
+            key-positions = <23 24 25>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        Default {
+        default {
             bindings = <
-       &kp L  &kp U  &kp COMMA  &kp DOT    &kp F  &kp W  &kp R  &kp Y
-&kp E  &kp I  &kp A  &kp O      &kp MINUS  &kp K  &kp T  &kp N  &kp S  &kp H
-&kp Z  &kp X  &kp C  &lt 1 V    &td3       &td4   &kp D  &kp M  &kp J  &kp B
+       &kp L  &kp U  &kp COMMA  &kp DOT      &kp F  &kp W  &kp R  &kp Y
+&kp E  &kp I  &kp A  &kp O      &kp MINUS    &kp K  &kp T  &kp N  &kp S  &kp H
+&kp Z  &kp X  &kp C  &lt 2 V    &td3         &kp G  &kp D  &kp M  &kp J  &kp B
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -387,9 +420,9 @@
 
         cursor {
             bindings = <
-       &kp LS(TAB)  &none  &kp TAB  &none  &none  &kp HOME  &kp PAGE_UP    &kp PRINTSCREEN
-&none  &none        &none  &none    &none  &none  &kp END   &kp PAGE_DOWN  &kp UP           &none
-&none  &none        &none  &none    &none  &none  &none     &kp LEFT       &kp DOWN         &kp RIGHT
+       &kp LS(TAB)     &kp UP          &kp TAB          &none  &none  &kp HOME  &kp PAGE_UP    &kp PRINTSCREEN
+&none  &kp LEFT        &kp DOWN        &kp RIGHT        &none  &none  &kp END   &kp PAGE_DOWN  &kp UP           &none
+&none  &none           &none           &none            &none  &none  &none     &kp LEFT       &kp DOWN         &kp RIGHT
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -411,41 +444,37 @@
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
             >;
-
-            sensor-bindings = <&scroll_up_down>;
         };
 
-        other {
+        setting {
             bindings = <
               &bt BT_CLR    &none         &bt BT_CLR_ALL  &none         &none  &none  &none  &none
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &none  &none  &none  &none       &none
 &bootloader   &sys_reset    &none         &none           &none         &none  &none  &none  &sys_reset  &bootloader
             >;
-
-            sensor-bindings = <&scroll_up_down>;
         };
 
         to_CTRL {
             bindings = <
-       &none     &kp UP    &none      &none  &none  &none  &none     &none
-&none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &none  &none     &kp UP    &none
-&none  &none     &none     &none      &none  &none  &none  &kp LEFT  &kp DOWN  &kp RIGHT
+       &kp LS(TAB)  &kp UP    &kp TAB    &none  &none  &kp HOME  &kp PAGE_UP    &none
+&none  &kp LEFT     &kp DOWN  &kp RIGHT  &none  &none  &kp END   &kp PAGE_DOWN  &kp UP    &none
+&none  &none        &none     &none      &none  &none  &none     &kp LEFT       &kp DOWN  &kp RIGHT
             >;
         };
 
         to_SHIFT {
             bindings = <
-       &none     &kp UP    &none      &none  &none  &none  &none     &none
-&none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &none  &none     &kp UP    &none
-&none  &none     &none     &none      &none  &none  &none  &kp LEFT  &kp DOWN  &kp RIGHT
+       &none     &kp UP    &none      &none  &none  &kp HOME  &kp PAGE_UP    &none
+&none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &kp END   &kp PAGE_DOWN  &kp UP    &none
+&none  &none     &none     &none      &none  &none  &none     &kp LEFT       &kp DOWN  &kp RIGHT
             >;
         };
 
         to_WIN {
             bindings = <
-       &none     &kp UP    &none      &none  &none  &none  &none     &none
-&none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &none  &none     &kp UP    &none
-&none  &none     &none     &none      &none  &none  &none  &kp LEFT  &kp DOWN  &kp RIGHT
+       &kp LS(TAB)  &kp UP    &kp TAB    &none  &none  &kp HOME  &kp PAGE_UP    &none
+&none  &kp LEFT     &kp DOWN  &kp RIGHT  &none  &none  &kp END   &kp PAGE_DOWN  &kp UP    &none
+&none  &none        &none     &none      &none  &none  &none     &kp LEFT       &kp DOWN  &kp RIGHT
             >;
         };
 
