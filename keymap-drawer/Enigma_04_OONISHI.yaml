@@ -31,51 +31,51 @@ layers:
   - B
   tenkey:
   - Sft+TAB
-  - UP
+  - ↑
   - TAB
   - ''
-  - KP SLASH
-  - KP 7
-  - {t: KP 8, type: held}
-  - {t: KP 9, type: held}
+  - /
+  - '7'
+  - {t: '8', type: held}
+  - {t: '9', type: held}
   - ''
-  - LEFT
-  - DOWN
-  - RIGHT
+  - ←
+  - ↓
+  - →
   - ''
-  - KP ASTERISK
-  - KP 4
-  - KP 5
-  - KP 6
-  - ''
-  - ''
+  - '*'
+  - '4'
+  - '5'
+  - '6'
   - ''
   - ''
   - ''
   - ''
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP DOT
+  - ''
+  - ''
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - .
   cursor:
   - Sft+TAB
-  - UP
+  - ↑
   - TAB
   - ''
   - ''
   - HOME
-  - PAGE UP
-  - PRINTSCREEN
+  - PgUp
+  - Prt Scn
   - ''
-  - LEFT
-  - DOWN
-  - RIGHT
+  - ←
+  - ↓
+  - →
   - ''
   - ''
   - END
-  - PAGE DOWN
-  - UP
+  - PgDn
+  - ↑
   - ''
   - ''
   - ''
@@ -84,9 +84,9 @@ layers:
   - ''
   - ''
   - ''
-  - LEFT
-  - DOWN
-  - RIGHT
+  - ←
+  - ↓
+  - →
   symbol:
   - ''
   - ''
@@ -126,43 +126,45 @@ layers:
   - ''
   - ''
   - ''
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
   - ''
   - ''
   - ''
   - ''
   - ''
-  - '&bootloader'
-  - '&sys_reset'
+  - Boot
+  - Reset
   - {type: held}
   - {type: held}
   - {type: held}
   - ''
   - ''
   - ''
-  - '&sys_reset'
-  - '&bootloader'
-  to_CTRL: [Sft+TAB, UP, TAB, '', '', HOME, PAGE UP, '', '', LEFT, DOWN, RIGHT, '', '', END, PAGE DOWN, UP, '', '', '', '', '', '', '', '', LEFT, DOWN, RIGHT]
-  to_SHIFT: ['', UP, '', '', '', HOME, PAGE UP, '', '', LEFT, DOWN, RIGHT, '', '', END, PAGE DOWN, UP, '', '', '', '', '', '', '', '', LEFT, DOWN, RIGHT]
-  to_WIN: [Sft+TAB, UP, TAB, '', '', HOME, PAGE UP, '', '', LEFT, DOWN, RIGHT, '', '', END, PAGE DOWN, UP, '', '', '', '', '', '', '', '', LEFT, DOWN, RIGHT]
-  to_ALT: [Sft+TAB, UP, TAB, '', '', HOME, PAGE UP, PRINTSCREEN, '', LEFT, DOWN, RIGHT, '', '', END, PAGE DOWN, UP, '', '', '', '', '', '', '', '', LEFT, DOWN, RIGHT]
+  - Reset
+  - Boot
+  to_CTRL: [Sft+TAB, ↑, TAB, '', '', HOME, PgUp, '', '', ←, ↓, →, '', '', END, PgDn, ↑, '', '', '', '', '', '', '', '', ←, ↓, →]
+  to_SHIFT: ['', ↑, '', '', '', HOME, PgUp, '', '', ←, ↓, →, '', '', END, PgDn, ↑, '', '', '', '', '', '', '', '', ←, ↓, →]
+  to_WIN: [Sft+TAB, ↑, TAB, '', '', HOME, PgUp, '', '', ←, ↓, →, '', '', END, PgDn, ↑, '', '', '', '', '', '', '', '', ←, ↓, →]
+  to_ALT: [Sft+TAB, ↑, TAB, '', '', HOME, PgUp, Prt Scn, '', ←, ↓, →, '', '', END, PgDn, ↑, '', '', '', '', '', '', '', '', ←, ↓, →]
 combos:
 - p: [15, 16]
   k: ENTER
   l: [default, tenkey, cursor, symbol, to_CTRL, to_SHIFT, to_WIN, to_ALT]
 - p: [6, 7]
-  k: {t: BACKSPACE, h: tenkey}
+  k: {t: BS, h: tenkey}
   l: [default, tenkey, cursor, symbol]
 - p: [5, 7]
-  k: {t: DELETE, h: symbol}
+  k: {t: Del, h: symbol}
   l: [default, tenkey, cursor, symbol]
+  a: top
 - p: [0, 2]
   k: {t: F2, h: symbol}
   l: [default, tenkey, cursor, symbol]
+  a: top
 - p: [0, 1]
   k: '&td1'
   l: [default, tenkey, cursor, symbol]
@@ -181,15 +183,18 @@ combos:
 - p: [9, 11]
   k: Ctl+X
   l: [default, tenkey, cursor, symbol, to_CTRL, to_SHIFT, to_WIN, to_ALT]
+  a: top
 - p: [8, 9]
   k: Ctl+A
   l: [default, tenkey, cursor, symbol]
 - p: [7, 17]
   k: P
   l: [default]
+  a: right
 - p: [0, 8]
   k: Q
   l: [default]
+  a: left
 - p: [4, 5]
   k: '-'
   l: [default]
@@ -200,10 +205,10 @@ combos:
   k: INTERNATIONAL 1
   l: [default]
 - p: [4, 5]
-  k: KP MINUS
+  k: '-'
   l: [tenkey]
 - p: [13, 14]
-  k: KP PLUS
+  k: +
   l: [tenkey]
 - p: [11, 12]
   k: KP EQUAL
@@ -229,10 +234,14 @@ combos:
 - p: [20, 18]
   k: '&ALT'
   l: [default, tenkey, cursor, symbol]
+  a: bottom
 - p: [25, 27]
   k: '&ALT'
   l: [default, tenkey, cursor, symbol]
+  a: bottom
 - p: [20, 21, 22]
   k: setting
+  a: bottom
 - p: [23, 24, 25]
   k: setting
+  a: bottom
