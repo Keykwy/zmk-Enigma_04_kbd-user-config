@@ -3,7 +3,7 @@
 ## GitHubリポジトリのフォーク  
 ファームウェアはGitHub Actionsで書き出します。  
 1. GitHubアカウントを持っていない場合は、事前に[アカウント登録](https://github.com/signup)をしてください。  
-2. 準備が出来たらこのリポジトリを[フォーク](https://github.com/nazuna293/zmk-Enigma_01-user-config/fork)します。  
+2. 準備が出来たらこのリポジトリを[フォーク](https://github.com/nazuna293/zmk-Enigma_04-user-config/fork)します。  
 <img src="img/FORK_01.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 <img src="img/FORK_02.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 <img src="img/FORK_03.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
@@ -23,9 +23,9 @@
 
 |Keyboard|配列|  
 |:-|:-|  
-|Enigma_01_a|1.0u配列|  
-|Enigma_01_b|1.5u配列|  
-|Enigma_01_c|2.0u配列|  
+|OONISHI|OONISHI配列|  
+|QWERTY|QWERTY配列|  
+
 <img src="img/KE_08.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 
 4. キーマップを編集します。  
@@ -36,13 +36,13 @@
 <img src="img/KE_09.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 <img src="img/KE_10.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 
-## ファームウェアをEnigma_01へ
+## ファームウェアをEnigma_04へ
 以下の手順で転送します。
 1. GitHub Actionsからファームウェアをダウンロード、解凍します。
 <img src="img/KE_11.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 <img src="img/KE_12.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 
-2. Enigma_01とパソコンをUSB-Cケーブルで接続します。
+2. Enigma_04とパソコンをUSB-Cケーブルで接続します。
 
 3. 本体のリセットボタンを2回押します。  
 もしくはsettingレイヤーに割り当ててあるリセットキー(bootloader)を押す
@@ -52,9 +52,12 @@
 
 |ファームウェア(.uf2)|配列|  
 |:-|:-|  
-|Enigma_01 layout_a|1.0u配列|  
-|Enigma_01 layout_b|1.5u配列|  
-|Enigma_01 layout_c|2.0u配列|  
+|Enigma_04_kbd_OONISHI_L|大西配列（左手）|  
+|Enigma_04_kbd_OONISHI_R|大西配列（右手）|  
+|Enigma_04_kbd_QWERTY_L|QWERTY配列（左手）|
+|Enigma_04_kbd_QWERTY_R|QWERTY配列（右手）|
+|setting_reset|リセットファームウェア|
+
 <img src="img/KE_13.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 
 ## デバイスと再接続  
