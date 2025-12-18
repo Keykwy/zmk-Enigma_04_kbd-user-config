@@ -37,7 +37,9 @@
 <img src="img/KE_10.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 
 ## ファームウェアをEnigma_04へ
-以下の手順で転送します。
+左右どちらからでも転送可能です。
+キーマップ変更だけの場合はマスター（左側）の転送のみで問題ありません。
+
 1. GitHub Actionsからファームウェアをダウンロード、解凍します。
 <img src="img/KE_11.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 <img src="img/KE_12.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
@@ -61,7 +63,7 @@
 
 <img src="img/KE_13.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 
-
+左右のペアリングやデバイスとの接続に異常がある場合は、ファームウェアを書き込みし直す前にsetting_resetを書き込んで初期化を行ってください。
 
 ## デバイスと再接続  
 1. Enigma_04を起動する
