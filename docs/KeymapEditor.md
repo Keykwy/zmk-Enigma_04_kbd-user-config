@@ -17,7 +17,7 @@
 <img src="img/KE_03.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 <img src="img/KE_04.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 <img src="img/KE_05.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
-2. zmk-config-Enigma_01を連携させます。  
+2. zmk-Enigma_04-user-configを連携させます。  
 <img src="img/KE_06.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 3. 該当するKeyboard（配列）を選択します。  
 
@@ -47,8 +47,9 @@
 3. 本体のリセットボタンを2回押します。  
 もしくはsettingレイヤーに割り当ててあるリセットキー(bootloader)を押す
 
-
 4. フォルダに「XIAO SENSE」が表示されたらファームウェア(.uf2)を貼り付けます。  
+ファームウェアをダウンロードして解凍すると5つのファイルが入っています。
+それぞれ以下のような役割を持つため、該当するファイルを本体に転送して使用します。
 
 |ファームウェア(.uf2)|配列|  
 |:-|:-|  
@@ -56,12 +57,14 @@
 |Enigma_04_kbd_OONISHI_R|大西配列（右手）|  
 |Enigma_04_kbd_QWERTY_L|QWERTY配列（左手）|
 |Enigma_04_kbd_QWERTY_R|QWERTY配列（右手）|
-|setting_reset|リセットファームウェア|
+|setting_reset|XIAO BLE リセット用|
 
 <img src="img/KE_13.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 
+
+
 ## デバイスと再接続  
-1. Enigma_04を起動する。
+1. Enigma_04を起動する
 > [!IMPORTANT]
 > サブ（右手側）、マスター（左手側）の順番で起動することで、**左右のペアリング**と**デバイスとの接続**が安定する。
 
@@ -78,19 +81,3 @@
 |USB給電（有線）|USB給電（有線）|
 |PC給電（有線）|バッテリー（無線）|
 |PC給電（有線）|USB給電（有線）|
-
-【ファームウェアの構成】
-ファームウェアをダウンロードして解凍すると3つのファイルが入っている。
-それぞれ役割が異なるため、必要なファイルを本体に転送して使用する。
-
-【ファームウェア転送手順】
-左右どちらからでも転送可能。
-キーマップ変更だけの場合はマスター（左側）のみ更新すればよく、リセットは不要。
-
-1. 本体をパソコンとケーブルで接続する
-2. リセットボタンを2回押す
-3. 表示されたフォルダに「リセット用ファイル」をコピーする
-4. 本体の接続が自動で解除される
-5. 再度リセットボタンを2回押す
-6. 表示されたフォルダに対象のファイルをコピーする（左ならL、右ならR）
-7. 本体の接続が自動で解除される
