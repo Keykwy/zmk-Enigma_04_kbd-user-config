@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk-keyboard-Enigma_04_kbd
       remote: nazuna293
-      revision: v1.1
+      revision: v1.0
       import: config/west.yml
   self:
     path: config
