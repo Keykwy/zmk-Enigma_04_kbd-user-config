@@ -1,5 +1,9 @@
 # KeymapEditor
 一般的なリポジトリをフォークする方法を紹介しますが、「Use this template」から新しいリポジトリを作成することもできます。このリポジトリの内容を引き継ぎつつ、ご自身のプライベートリポジトリとしても使用できます。
+[リポジトリのフォーク](#GitHubリポジトリのフォーク)
+[KeymapEditorの操作](#KeymapEditorと連携)
+[ファームウェアの転送](#ファームウェアをEnigma_04へ)
+
 ## GitHubリポジトリのフォーク  
 ファームウェアはGitHub Actionsで書き出します。  
 1. GitHubアカウントを持っていない場合は、事前に[アカウント登録](https://github.com/signup)をしてください。  
