@@ -37,8 +37,8 @@
 <img src="img/KE_10.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 
 ## ファームウェアをEnigma_04へ
-左右どちらからでも転送可能です。
-キーマップ変更だけの場合はマスター（左側）の転送のみで問題ありません。
+左右どちらからでも転送可能です。  
+キーマップ変更だけの場合はマスター（左手）の転送のみで問題ありません。
 
 1. GitHub Actionsからファームウェアをダウンロード、解凍します。
 <img src="img/KE_11.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
@@ -55,15 +55,16 @@
 
 |ファームウェア(.uf2)|配列|  
 |:-|:-|  
-|Enigma_04_kbd_OONISHI_L|大西配列（左手）|  
-|Enigma_04_kbd_OONISHI_R|大西配列（右手）|  
-|Enigma_04_kbd_QWERTY_L|QWERTY配列（左手）|
-|Enigma_04_kbd_QWERTY_R|QWERTY配列（右手）|
+|Enigma_04 OONISHI_L|大西配列（左手）|  
+|Enigma_04 OONISHI_R|大西配列（右手）|  
+|Enigma_04 QWERTY_L|QWERTY配列（左手）|
+|Enigma_04 QWERTY_R|QWERTY配列（右手）|
 |setting_reset|XIAO BLE リセット用|
 
 <img src="img/KE_13.jpg" alt="製品画像" style="width: 100%; max-width: 600px; height: auto;">
 
-左右のペアリングやデバイスとの接続に異常がある場合は、ファームウェアを書き込みし直す前にsetting_resetを書き込んで初期化を行ってください。
+> [!TIP]
+> 左右のペアリングやデバイスとの接続に異常がある場合は、ファームウェアを書き込みし直す前にsetting_resetを書き込んで初期化を行ってください。
 
 ## デバイスと再接続  
 1. Enigma_04を起動する
