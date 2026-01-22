@@ -1,9 +1,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #undef ZMK_POINTING_DEFAULT_SCRL_VAL
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 / {
@@ -344,9 +344,9 @@
 
         default {
             bindings = <
-       &kp W  &kp E  &kp R  &kp T      &kp Y  &kp U  &kp I  &kp O
-&kp A  &kp S  &kp D  &kp F      &kp G    &kp H  &kp J  &kp K  &kp L  &td4
-&kp Z  &kp X  &kp C  &lt 2 V    &td3  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
+       &kp W  &kp E  &kp R    &kp T  &kp Y  &kp U  &kp I      &kp O
+&kp A  &kp S  &kp D  &kp F    &kp G  &kp H  &kp J  &kp K      &kp L    &td4
+&kp A  &kp X  &kp C  &lt 2 V  &td3   &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
             >;
         };
 
@@ -360,9 +360,9 @@
 
         cursor {
             bindings = <
-       &kp LS(TAB)     &kp UP          &kp TAB          &none  &none  &kp HOME  &kp PAGE_UP    &kp PRINTSCREEN
-&none  &kp LEFT        &kp DOWN        &kp RIGHT        &none  &none  &kp END   &kp PAGE_DOWN  &kp UP           &none
-&none  &none           &none           &none            &none  &none  &none     &kp LEFT       &kp DOWN         &kp RIGHT
+       &kp LS(TAB)  &kp UP    &kp TAB    &none  &none  &kp HOME  &kp PAGE_UP    &kp PRINTSCREEN
+&none  &kp LEFT     &kp DOWN  &kp RIGHT  &none  &none  &kp END   &kp PAGE_DOWN  &kp UP           &none
+&none  &none        &none     &none      &none  &none  &none     &kp LEFT       &kp DOWN         &kp RIGHT
             >;
         };
 
